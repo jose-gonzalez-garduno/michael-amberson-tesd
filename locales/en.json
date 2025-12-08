@@ -5,16 +5,134 @@
     "welcome": "Welcome to the campaign website",
     "description": "Dedicated to improving education and supporting our community's children and teachers.",
     "learnMore": "Learn More",
-    "getInvolved": "Get Involved"
+    "getInvolved": "Get Involved",
+    "issuesTitle": "Our Priorities",
+    "issuesDescription": "Key issues I will champion for our students, teachers, and community"
+  },
+  "hero": {
+    "title": "Michael Amberson III",
+    "subtitle": "For Tempe Elementary School District Governing Board",
+    "tagline": "Dedicated to improving education and supporting our community's children and teachers.",
+    "donateCTA": "Donate Now",
+    "volunteerCTA": "Volunteer",
+    "imageAlt": "Michael Amberson III - Candidate portrait"
   },
   "nav": {
     "home": "Home",
     "about": "About",
     "issues": "Issues",
-    "contact": "Contact"
+    "endorsements": "Endorsements",
+    "events": "Events",
+    "volunteer": "Volunteer",
+    "donate": "Donate",
+    "contact": "Contact",
+    "news": "News",
+    "press": "Press"
   },
   "footer": {
     "copyright": "© 2024 Michael Amberson III Campaign. All rights reserved.",
-    "paid": "Paid for by Friends of Michael Amberson III"
+    "paid": "Paid for by Friends of Michael Amberson III",
+    "campaignName": "Michael Amberson III",
+    "position": "Candidate for Governing Board",
+    "district": "Tempe Elementary School District",
+    "quickLinks": "Quick Links",
+    "about": "About",
+    "issues": "Issues",
+    "volunteer": "Volunteer",
+    "contact": "Contact",
+    "press": "Press",
+    "connect": "Connect",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookie Policy",
+    "treasurer": "Treasurer",
+    "treasurerName": "Jane Doe",
+    "treasurerEmail": "treasurer@example.com"
+  },
+  "volunteer": {
+    "title": "Volunteer with Us",
+    "subtitle": "Join our movement to improve education in Tempe",
+    "description": "We need your help to make a difference. Sign up to volunteer and be part of positive change.",
+    "fields": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "preferredLanguage": "Preferred Language",
+      "languageOptions": {
+        "en": "English",
+        "es": "Spanish"
+      },
+      "address": "Address",
+      "optional": "(Optional)",
+      "comments": "How would you like to help?",
+      "consent": "I agree to receive communications from the Michael Amberson III Campaign"
+    },
+    "submit": "Sign Up to Volunteer",
+    "submitting": "Submitting...",
+    "success": {
+      "title": "Thank You!",
+      "message": "We've received your volunteer signup. Someone from our team will contact you soon."
+    },
+    "errors": {
+      "title": "Error",
+      "firstName": "First name is required",
+      "lastName": "Last name is required",
+      "email": "Valid email address is required",
+      "phone": "Phone number is required",
+      "consent": "You must agree to receive communications",
+      "submission": "An error occurred. Please try again."
+    }
+  },
+  "about": {
+    "title": "About Michael Amberson III",
+    "intro": "Placeholder: Introduction paragraph about Michael's background and commitment to education.",
+    "biography": "Placeholder: Detailed biography covering professional experience, educational background, and community involvement.",
+    "values": "Placeholder: Core values and vision for the Tempe Elementary School District."
+  },
+  "issues": {
+    "title": "Our Platform",
+    "subtitle": "Key priorities for Tempe Elementary School District",
+    "readMore": "Read More"
+  },
+  "endorsements": {
+    "title": "Community Support",
+    "subtitle": "Proud to be endorsed by community leaders and organizations"
+  },
+  "events": {
+    "title": "Upcoming Events",
+    "subtitle": "Join us at upcoming campaign events",
+    "register": "Register",
+    "learnMore": "Learn More",
+    "noEvents": "No upcoming events at this time. Check back soon!"
+  },
+  "donate": {
+    "title": "Support Our Campaign",
+    "subtitle": "Your contribution helps us reach more voters and make a difference",
+    "description": "Every donation, no matter the size, helps us build a stronger future for Tempe's students.",
+    "cta": "Donate via ActBlue",
+    "secure": "Secure donation powered by ActBlue"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "We'd love to hear from you",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "placeholder": {
+      "address": "Campaign Office Address (Placeholder)"
+    }
+  },
+  "news": {
+    "title": "Campaign News",
+    "subtitle": "Latest updates from the campaign",
+    "readMore": "Read More",
+    "noNews": "No news articles yet. Check back soon!"
+  },
+  "press": {
+    "title": "Press Resources",
+    "subtitle": "Media kit and campaign materials",
+    "downloads": "Available Downloads",
+    "contact": "For press inquiries, contact:",
+    "email": "press@michaelamberson.example"
   }
 }

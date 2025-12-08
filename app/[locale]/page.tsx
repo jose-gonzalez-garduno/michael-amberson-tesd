@@ -1,44 +1,68 @@
 import { useTranslations } from 'next-intl';
+import Hero from '../components/Hero';
+import IssueCard from '../components/IssueCard';
+import type { Issue } from '@/types';
 
-export default function Home() {
+interface PageProps {
+  params: Promise<{ locale: string }>;
+}
+
+export default async function Home({ params }: PageProps) {
+  const { locale } = await params;
   const t = useTranslations('home');
+  
+  // Placeholder issues - these would come from a CMS or database in production
+  const issues: Issue[] = [
+    {
+      id: 'teacher-support',
+      title: locale === 'es' ? 'Apoyo a los Maestros (VERIFY TRANSLATION)' : 'Teacher Support',
+      description: locale === 'es' 
+        ? 'Asegurar recursos adecuados, desarrollo profesional y compensación competitiva para nuestros educadores. (VERIFY TRANSLATION)'
+        : 'Ensuring adequate resources, professional development, and competitive compensation for our educators.',
+      icon: '👩‍🏫',
+    },
+    {
+      id: 'student-achievement',
+      title: locale === 'es' ? 'Logro Estudiantil (VERIFY TRANSLATION)' : 'Student Achievement',
+      description: locale === 'es'
+        ? 'Implementar programas basados en evidencia que promuevan el éxito académico de todos los estudiantes. (VERIFY TRANSLATION)'
+        : 'Implementing evidence-based programs that promote academic success for all students.',
+      icon: '📚',
+    },
+    {
+      id: 'community-engagement',
+      title: locale === 'es' ? 'Participación Comunitaria (VERIFY TRANSLATION)' : 'Community Engagement',
+      description: locale === 'es'
+        ? 'Fomentar la comunicación abierta entre la junta, las familias y los miembros de la comunidad. (VERIFY TRANSLATION)'
+        : 'Fostering open communication between the board, families, and community members.',
+      icon: '🤝',
+    },
+  ];
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-campaign-light font-sans">
-      <main className="flex min-h-screen w-full max-w-4xl flex-col items-center justify-between py-32 px-8 bg-white sm:items-start">
-        <div className="w-full">
-          <h1 className="text-4xl font-bold leading-tight tracking-tight text-campaign-primary mb-4">
-            {t('title')}
-          </h1>
-          <h2 className="text-2xl font-semibold text-campaign-secondary mb-8">
-            {t('subtitle')}
-          </h2>
+    <div className="flex flex-col">
+      {/* Hero Section */}
+      <Hero locale={locale} />
+      
+      {/* Issues Highlights Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-campaign-text-dark mb-4">
+              {t('issuesTitle')}
+            </h2>
+            <p className="text-lg text-campaign-text-light max-w-2xl mx-auto">
+              {t('issuesDescription')}
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {issues.map((issue) => (
+              <IssueCard key={issue.id} issue={issue} locale={locale} />
+            ))}
+          </div>
         </div>
-        
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left my-12">
-          <p className="text-xl font-semibold text-campaign-text-dark">
-            {t('welcome')}
-          </p>
-          <p className="max-w-2xl text-lg leading-8 text-campaign-text-light">
-            {t('description')}
-          </p>
-        </div>
-        
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row w-full">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-campaign-primary px-5 text-white transition-colors hover:bg-campaign-primary-dark md:w-[200px]"
-            href="#about"
-          >
-            {t('learnMore')}
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border-2 border-campaign-primary px-5 text-campaign-primary transition-colors hover:bg-campaign-primary hover:text-white md:w-[200px]"
-            href="#contact"
-          >
-            {t('getInvolved')}
-          </a>
-        </div>
-      </main>
+      </section>
     </div>
   );
 }

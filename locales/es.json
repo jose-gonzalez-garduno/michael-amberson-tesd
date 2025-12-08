@@ -5,16 +5,134 @@
     "welcome": "Bienvenido al sitio web de campaña",
     "description": "Dedicado a mejorar la educación y apoyar a los niños y maestros de nuestra comunidad.",
     "learnMore": "Más Información",
-    "getInvolved": "Participa"
+    "getInvolved": "Participa",
+    "issuesTitle": "Nuestras Prioridades (VERIFY TRANSLATION)",
+    "issuesDescription": "Temas clave que defenderé para nuestros estudiantes, maestros y comunidad (VERIFY TRANSLATION)"
+  },
+  "hero": {
+    "title": "Michael Amberson III",
+    "subtitle": "Para la Junta Directiva del Distrito Escolar Primario de Tempe (VERIFY TRANSLATION)",
+    "tagline": "Dedicado a mejorar la educación y apoyar a los niños y maestros de nuestra comunidad.",
+    "donateCTA": "Donar Ahora (VERIFY TRANSLATION)",
+    "volunteerCTA": "Ser Voluntario (VERIFY TRANSLATION)",
+    "imageAlt": "Michael Amberson III - Retrato del candidato (VERIFY TRANSLATION)"
   },
   "nav": {
     "home": "Inicio",
     "about": "Sobre Mí",
     "issues": "Temas",
-    "contact": "Contacto"
+    "endorsements": "Endorsos (VERIFY TRANSLATION)",
+    "events": "Eventos (VERIFY TRANSLATION)",
+    "volunteer": "Voluntarios (VERIFY TRANSLATION)",
+    "donate": "Donar (VERIFY TRANSLATION)",
+    "contact": "Contacto",
+    "news": "Noticias (VERIFY TRANSLATION)",
+    "press": "Prensa (VERIFY TRANSLATION)"
   },
   "footer": {
     "copyright": "© 2024 Campaña de Michael Amberson III. Todos los derechos reservados.",
-    "paid": "Pagado por Amigos de Michael Amberson III"
+    "paid": "Pagado por Amigos de Michael Amberson III",
+    "campaignName": "Michael Amberson III",
+    "position": "Candidato para la Junta Directiva (VERIFY TRANSLATION)",
+    "district": "Distrito Escolar Primario de Tempe (VERIFY TRANSLATION)",
+    "quickLinks": "Enlaces Rápidos (VERIFY TRANSLATION)",
+    "about": "Sobre Mí",
+    "issues": "Temas",
+    "volunteer": "Voluntarios",
+    "contact": "Contacto",
+    "press": "Prensa",
+    "connect": "Conectar (VERIFY TRANSLATION)",
+    "privacy": "Política de Privacidad (VERIFY TRANSLATION)",
+    "cookies": "Política de Cookies (VERIFY TRANSLATION)",
+    "treasurer": "Tesorero (VERIFY TRANSLATION)",
+    "treasurerName": "Jane Doe",
+    "treasurerEmail": "treasurer@example.com"
+  },
+  "volunteer": {
+    "title": "Únete como Voluntario (VERIFY TRANSLATION)",
+    "subtitle": "Únete a nuestro movimiento para mejorar la educación en Tempe (VERIFY TRANSLATION)",
+    "description": "Necesitamos tu ayuda para hacer la diferencia. Regístrate como voluntario y sé parte del cambio positivo. (VERIFY TRANSLATION)",
+    "fields": {
+      "firstName": "Nombre (VERIFY TRANSLATION)",
+      "lastName": "Apellido (VERIFY TRANSLATION)",
+      "email": "Correo Electrónico (VERIFY TRANSLATION)",
+      "phone": "Número de Teléfono (VERIFY TRANSLATION)",
+      "preferredLanguage": "Idioma Preferido (VERIFY TRANSLATION)",
+      "languageOptions": {
+        "en": "Inglés",
+        "es": "Español"
+      },
+      "address": "Dirección (VERIFY TRANSLATION)",
+      "optional": "(Opcional)",
+      "comments": "¿Cómo te gustaría ayudar? (VERIFY TRANSLATION)",
+      "consent": "Acepto recibir comunicaciones de la Campaña de Michael Amberson III (VERIFY TRANSLATION)"
+    },
+    "submit": "Registrarse como Voluntario (VERIFY TRANSLATION)",
+    "submitting": "Enviando... (VERIFY TRANSLATION)",
+    "success": {
+      "title": "¡Gracias! (VERIFY TRANSLATION)",
+      "message": "Hemos recibido tu registro de voluntario. Alguien de nuestro equipo se pondrá en contacto contigo pronto. (VERIFY TRANSLATION)"
+    },
+    "errors": {
+      "title": "Error",
+      "firstName": "El nombre es requerido (VERIFY TRANSLATION)",
+      "lastName": "El apellido es requerido (VERIFY TRANSLATION)",
+      "email": "Se requiere una dirección de correo electrónico válida (VERIFY TRANSLATION)",
+      "phone": "El número de teléfono es requerido (VERIFY TRANSLATION)",
+      "consent": "Debes aceptar recibir comunicaciones (VERIFY TRANSLATION)",
+      "submission": "Ocurrió un error. Por favor, inténtalo de nuevo. (VERIFY TRANSLATION)"
+    }
+  },
+  "about": {
+    "title": "Sobre Michael Amberson III (VERIFY TRANSLATION)",
+    "intro": "Marcador: Párrafo de introducción sobre los antecedentes de Michael y su compromiso con la educación. (VERIFY TRANSLATION)",
+    "biography": "Marcador: Biografía detallada que cubre experiencia profesional, formación educativa y participación comunitaria. (VERIFY TRANSLATION)",
+    "values": "Marcador: Valores fundamentales y visión para el Distrito Escolar Primario de Tempe. (VERIFY TRANSLATION)"
+  },
+  "issues": {
+    "title": "Nuestra Plataforma (VERIFY TRANSLATION)",
+    "subtitle": "Prioridades clave para el Distrito Escolar Primario de Tempe (VERIFY TRANSLATION)",
+    "readMore": "Leer Más (VERIFY TRANSLATION)"
+  },
+  "endorsements": {
+    "title": "Apoyo de la Comunidad (VERIFY TRANSLATION)",
+    "subtitle": "Orgulloso de contar con el apoyo de líderes y organizaciones comunitarias (VERIFY TRANSLATION)"
+  },
+  "events": {
+    "title": "Próximos Eventos (VERIFY TRANSLATION)",
+    "subtitle": "Únete a nosotros en los próximos eventos de campaña (VERIFY TRANSLATION)",
+    "register": "Registrarse (VERIFY TRANSLATION)",
+    "learnMore": "Más Información (VERIFY TRANSLATION)",
+    "noEvents": "No hay eventos próximos en este momento. ¡Vuelve pronto! (VERIFY TRANSLATION)"
+  },
+  "donate": {
+    "title": "Apoya Nuestra Campaña (VERIFY TRANSLATION)",
+    "subtitle": "Tu contribución nos ayuda a llegar a más votantes y marcar la diferencia (VERIFY TRANSLATION)",
+    "description": "Cada donación, sin importar el tamaño, nos ayuda a construir un futuro mejor para los estudiantes de Tempe. (VERIFY TRANSLATION)",
+    "cta": "Donar vía ActBlue (VERIFY TRANSLATION)",
+    "secure": "Donación segura con ActBlue (VERIFY TRANSLATION)"
+  },
+  "contact": {
+    "title": "Ponte en Contacto (VERIFY TRANSLATION)",
+    "subtitle": "Nos encantaría saber de ti (VERIFY TRANSLATION)",
+    "email": "Correo Electrónico",
+    "phone": "Teléfono",
+    "address": "Dirección",
+    "placeholder": {
+      "address": "Dirección de la Oficina de Campaña (Marcador) (VERIFY TRANSLATION)"
+    }
+  },
+  "news": {
+    "title": "Noticias de la Campaña (VERIFY TRANSLATION)",
+    "subtitle": "Últimas actualizaciones de la campaña (VERIFY TRANSLATION)",
+    "readMore": "Leer Más (VERIFY TRANSLATION)",
+    "noNews": "Aún no hay artículos de noticias. ¡Vuelve pronto! (VERIFY TRANSLATION)"
+  },
+  "press": {
+    "title": "Recursos de Prensa (VERIFY TRANSLATION)",
+    "subtitle": "Kit de medios y materiales de campaña (VERIFY TRANSLATION)",
+    "downloads": "Descargas Disponibles (VERIFY TRANSLATION)",
+    "contact": "Para consultas de prensa, contacta: (VERIFY TRANSLATION)",
+    "email": "press@michaelamberson.example"
   }
 }
