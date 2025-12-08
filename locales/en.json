@@ -1,0 +1,20 @@
+{
+  "home": {
+    "title": "Michael Amberson III for Tempe Elementary School District",
+    "subtitle": "Running for Governing Board",
+    "welcome": "Welcome to the campaign website",
+    "description": "Dedicated to improving education and supporting our community's children and teachers.",
+    "learnMore": "Learn More",
+    "getInvolved": "Get Involved"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "issues": "Issues",
+    "contact": "Contact"
+  },
+  "footer": {
+    "copyright": "© 2024 Michael Amberson III Campaign. All rights reserved.",
+    "paid": "Paid for by Friends of Michael Amberson III"
+  }
+}

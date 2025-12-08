@@ -1,0 +1,51 @@
+name: Content Update
+description: Request updates to website content
+title: "[Content]: "
+labels: ["content", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to request updates to the campaign website content.
+  - type: dropdown
+    id: section
+    attributes:
+      label: Which section needs updating?
+      options:
+        - Home Page
+        - About Page
+        - Issues/Platform
+        - Contact Information
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current Content
+      description: What is the current content that needs to be changed?
+      placeholder: Copy the current content here...
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed Content
+      description: What should the new content be?
+      placeholder: Write or paste the new content here...
+    validations:
+      required: true
+  - type: dropdown
+    id: language
+    attributes:
+      label: Which language version?
+      multiple: true
+      options:
+        - English
+        - Spanish
+        - Both
+    validations:
+      required: true
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Add any other context about the content update here.

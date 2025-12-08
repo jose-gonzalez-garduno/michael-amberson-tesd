@@ -1,0 +1,20 @@
+{
+  "home": {
+    "title": "Michael Amberson III para el Distrito Escolar Primario de Tempe",
+    "subtitle": "Candidato para la Junta Directiva",
+    "welcome": "Bienvenido al sitio web de campaña",
+    "description": "Dedicado a mejorar la educación y apoyar a los niños y maestros de nuestra comunidad.",
+    "learnMore": "Más Información",
+    "getInvolved": "Participa"
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre Mí",
+    "issues": "Temas",
+    "contact": "Contacto"
+  },
+  "footer": {
+    "copyright": "© 2024 Campaña de Michael Amberson III. Todos los derechos reservados.",
+    "paid": "Pagado por Amigos de Michael Amberson III"
+  }
+}
