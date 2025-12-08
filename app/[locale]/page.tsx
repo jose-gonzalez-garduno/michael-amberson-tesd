@@ -16,10 +16,10 @@ export default function Home() {
         </div>
         
         <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left my-12">
-          <p className="text-xl font-semibold text-gray-800">
+          <p className="text-xl font-semibold text-campaign-text-dark">
             {t('welcome')}
           </p>
-          <p className="max-w-2xl text-lg leading-8 text-gray-600">
+          <p className="max-w-2xl text-lg leading-8 text-campaign-text-light">
             {t('description')}
           </p>
         </div>
