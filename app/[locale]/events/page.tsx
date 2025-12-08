@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import type { CampaignEvent } from '@/types';
 
 interface PageProps {
@@ -7,7 +7,7 @@ interface PageProps {
 
 export default async function Events({ params }: PageProps) {
   const { locale } = await params;
-  const t = useTranslations('events');
+  const t = await getTranslations('events');
   
   // Placeholder events
   const events: CampaignEvent[] = [

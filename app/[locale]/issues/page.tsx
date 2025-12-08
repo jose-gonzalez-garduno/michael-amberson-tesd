@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import type { Issue } from '@/types';
 
 interface PageProps {
@@ -7,7 +7,7 @@ interface PageProps {
 
 export default async function Issues({ params }: PageProps) {
   const { locale } = await params;
-  const t = useTranslations('issues');
+  const t = await getTranslations('issues');
   
   // Placeholder issues - expand with more details
   const issues: Issue[] = [

@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import VolunteerForm from '../../components/VolunteerForm';
 
 interface PageProps {
@@ -7,7 +7,7 @@ interface PageProps {
 
 export default async function Volunteer({ params }: PageProps) {
   const { locale } = await params;
-  const t = useTranslations('volunteer');
+  const t = await getTranslations('volunteer');
   
   return (
     <div className="py-16 bg-campaign-light min-h-screen">

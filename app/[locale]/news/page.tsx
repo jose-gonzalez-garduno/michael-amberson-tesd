@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { NewsPost } from '@/types';
@@ -9,7 +9,7 @@ interface PageProps {
 
 export default async function News({ params }: PageProps) {
   const { locale } = await params;
-  const t = useTranslations('news');
+  const t = await getTranslations('news');
   
   // Placeholder news posts
   const posts: NewsPost[] = [

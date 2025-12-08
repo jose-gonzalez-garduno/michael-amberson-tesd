@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import type { Endorsement } from '@/types';
 
@@ -8,7 +8,7 @@ interface PageProps {
 
 export default async function Endorsements({ params }: PageProps) {
   const { locale } = await params;
-  const t = useTranslations('endorsements');
+  const t = await getTranslations('endorsements');
   
   // Placeholder endorsements
   const endorsements: Endorsement[] = [
@@ -85,7 +85,7 @@ export default async function Endorsements({ params }: PageProps) {
               {/* Quote */}
               {endorsement.quote && (
                 <blockquote className="text-campaign-text-light italic border-l-4 border-campaign-accent pl-4 mt-auto">
-                  "{endorsement.quote}"
+                  &quot;{endorsement.quote}&quot;
                 </blockquote>
               )}
             </div>

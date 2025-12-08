@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -6,8 +6,8 @@ interface HeroProps {
   locale: string;
 }
 
-export default function Hero({ locale }: HeroProps) {
-  const t = useTranslations('hero');
+export default async function Hero({ locale }: HeroProps) {
+  const t = await getTranslations('hero');
   
   return (
     <section className="relative bg-campaign-light py-16 md:py-24">

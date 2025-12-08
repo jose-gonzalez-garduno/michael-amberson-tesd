@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import Hero from '../components/Hero';
 import IssueCard from '../components/IssueCard';
 import type { Issue } from '@/types';
@@ -9,7 +9,7 @@ interface PageProps {
 
 export default async function Home({ params }: PageProps) {
   const { locale } = await params;
-  const t = useTranslations('home');
+  const t = await getTranslations('home');
   
   // Placeholder issues - these would come from a CMS or database in production
   const issues: Issue[] = [
