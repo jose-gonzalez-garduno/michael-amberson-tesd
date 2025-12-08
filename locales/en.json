@@ -29,6 +29,9 @@
     "news": "News",
     "press": "Press"
   },
+  "issueCard": {
+    "readMore": "Learn more"
+  },
   "footer": {
     "copyright": "© 2024 Michael Amberson III Campaign. All rights reserved.",
     "paid": "Paid for by Friends of Michael Amberson III",

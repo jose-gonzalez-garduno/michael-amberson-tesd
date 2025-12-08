@@ -51,12 +51,14 @@ export async function POST(request: NextRequest) {
     };
     
     // Call Meta Conversion API
-    const metaApiUrl = `https://graph.facebook.com/v18.0/${pixelId}/events?access_token=${accessToken}`;
+    // NOTE: Using Authorization header to avoid exposing token in URL logs
+    const metaApiUrl = `https://graph.facebook.com/v18.0/${pixelId}/events`;
     
     const response = await fetch(metaApiUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Authorization': `Bearer ${accessToken}`,
       },
       body: JSON.stringify(payload),
     });

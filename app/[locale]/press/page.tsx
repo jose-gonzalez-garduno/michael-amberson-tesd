@@ -1,7 +1,7 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
-export default function Press() {
-  const t = useTranslations('press');
+export default async function Press() {
+  const t = await getTranslations('press');
   
   // Placeholder press resources
   const resources = [

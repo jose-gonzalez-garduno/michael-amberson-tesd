@@ -21,13 +21,16 @@
     "home": "Inicio",
     "about": "Sobre Mí",
     "issues": "Temas",
-    "endorsements": "Endorsos (VERIFY TRANSLATION)",
+    "endorsements": "Endosos (VERIFY TRANSLATION)",
     "events": "Eventos (VERIFY TRANSLATION)",
     "volunteer": "Voluntarios (VERIFY TRANSLATION)",
     "donate": "Donar (VERIFY TRANSLATION)",
     "contact": "Contacto",
     "news": "Noticias (VERIFY TRANSLATION)",
     "press": "Prensa (VERIFY TRANSLATION)"
+  },
+  "issueCard": {
+    "readMore": "Leer más (VERIFY TRANSLATION)"
   },
   "footer": {
     "copyright": "© 2024 Campaña de Michael Amberson III. Todos los derechos reservados.",

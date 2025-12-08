@@ -1,7 +1,7 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
-export default function Contact() {
-  const t = useTranslations('contact');
+export default async function Contact() {
+  const t = await getTranslations('contact');
   
   return (
     <div className="py-16 bg-campaign-light min-h-screen">
