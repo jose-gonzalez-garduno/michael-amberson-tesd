@@ -1,27 +1,35 @@
-# Michael Amberson III for Tempe Elementary School District
+# Campaign Website - Monteroforaz Design
 
-Campaign website for Michael Amberson III running for Tempe Elementary School District Governing Board.
+Modern, minimalist campaign website with dark theme aesthetic. Built with Next.js, TypeScript, and Tailwind CSS.
 
-## Tech Stack
+## 🎨 Design Theme
+
+This website uses the **monteroforaz-inspired** design with a dark, single-page aesthetic featuring:
+
+### Color Palette
+- **Primary Accent**: `#69CE89` (Green) - Main call-to-action color
+- **Secondary Accent**: `#FBA16C` (Orange) - Secondary highlights
+- **Background**: `#0b0c0d` - Dark base
+- **Paper**: `#0f1112` - Slightly lighter dark for cards
+- **Muted Text**: `#9aa0a6` - Secondary text color
+
+### Visual Style
+- Dark minimalist aesthetic with subtle gradients
+- Large, spaced typography for hero sections
+- Card-based layouts with hover lift effects
+- Accessible color contrast ratios
+- System font stack for performance
+
+## 🚀 Tech Stack
 
 - **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/) with custom campaign theme tokens
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/) with custom theme
 - **Internationalization**: [next-intl](https://next-intl-docs.vercel.app/) (English and Spanish)
-- **Deployment**: [Vercel](https://vercel.com/)
-- **CI/CD**: GitHub Actions
 - **Accessibility Testing**: Playwright with axe-core
-- **Analytics**: Google Tag Manager (GTM), GA4, Meta Pixel, Meta Conversion API
+- **Analytics**: Google Tag Manager (GTM)
 
-## Campaign Color Palette
-
-The website uses a custom theme with the following colors:
-- **Primary (Deep Blue)**: `#1e40af` - Represents trust and stability
-- **Secondary (Red)**: `#dc2626` - Represents energy and passion
-- **Accent (Amber)**: `#f59e0b` - Represents warmth and optimism
-- **Light Background**: `#eff6ff` - Light blue for sections
-
-## Getting Started
+## 📦 Getting Started
 
 ### Prerequisites
 
@@ -57,6 +65,54 @@ The website uses a custom theme with the following colors:
    Navigate to [http://localhost:3000](http://localhost:3000) to see the website.
    
    The app will automatically redirect to `/en` (English) by default. To view Spanish, navigate to `/es`.
+
+## 📝 Customizing Content
+
+This website uses **placeholder content** that you should replace with actual campaign information. Here's where to make changes:
+
+### Candidate Name & Site Title
+- **Header/Navigation**: `app/components/Header.tsx` - Replace "Candidate Name"
+- **Footer**: `app/components/Footer.tsx` - Update campaign info
+- **Layout metadata**: `app/[locale]/layout.tsx` - Update `title` and `description`
+
+### Hero Section
+- **Main heading & tagline**: `app/components/Hero.tsx`
+- **CTA buttons**: Links currently point to `/platform`, `#donate`, and `/get-involved`
+
+### Platform/Issues Content
+- **Platform data**: `src/data/platforms.ts` - Contains 4 placeholder platform items
+  - Edit `title`, `summary`, `details`, and `icon` for each platform
+  - Add or remove platforms as needed
+  - Update `slug` for URL paths
+- **Platform pages**: Auto-generated from data using `generateStaticParams`
+
+### About Page
+- **Biography content**: `app/[locale]/about/page.tsx`
+- Replace all `[Placeholder biography...]` text with actual candidate bio
+
+### Get Involved Page
+- **Volunteer form**: `app/[locale]/get-involved/page.tsx`
+- Currently shows a placeholder form (disabled)
+- Integrate with your preferred form handler or CRM
+
+### Images & Graphics
+- **Location**: `public/placeholders/`
+- **Files to replace**:
+  - `placeholder-hero.svg` (1600×900px) - Hero/banner image
+  - `placeholder-portrait.svg` (800×800px) - Candidate portrait
+  - `placeholder-card-1.jpg` (800×800px) - Platform card images
+  - `placeholder-card-2.jpg` (800×800px)
+- **Instructions**: See `public/placeholders/README.txt` for details
+
+### Color Theme
+If you want to customize colors beyond the monteroforaz palette:
+- **CSS Variables**: `app/globals.css` - Update `:root` variables
+- **Tailwind Config**: `tailwind.config.ts` - Update `theme.extend.colors`
+
+### Contact Information
+- **Footer links**: `app/components/Footer.tsx`
+- **About page**: `app/[locale]/about/page.tsx`
+- Replace `info@example.com` and `(123) 456-7890` with real contact details
 
 ## Available Scripts
 
@@ -118,27 +174,35 @@ SENDGRID_API_KEY="your-api-key"
 .
 ├── app/
 │   ├── [locale]/              # Internationalized pages
+│   │   ├── platform/          # Platform list and detail pages
+│   │   │   ├── [slug]/        # Dynamic platform detail pages
+│   │   │   └── page.tsx       # Platform listing page
 │   │   ├── about/             # About page
-│   │   ├── issues/            # Issues/platform page
+│   │   ├── get-involved/      # Get involved (volunteer/donate)
+│   │   ├── issues/            # Legacy issues page
 │   │   ├── endorsements/      # Endorsements page
 │   │   ├── events/            # Events page
 │   │   ├── donate/            # Donate page
-│   │   ├── volunteer/         # Volunteer form page
+│   │   ├── volunteer/         # Legacy volunteer page
 │   │   ├── contact/           # Contact page
 │   │   ├── news/              # News/blog page
 │   │   ├── press/             # Press resources page
 │   │   ├── layout.tsx         # Locale-specific layout with GTM
-│   │   └── page.tsx           # Home page with hero
+│   │   └── page.tsx           # Home page with hero & platform cards
 │   ├── api/
 │   │   ├── volunteer/         # Volunteer form API endpoint
 │   │   └── track-meta/        # Meta Conversion API endpoint
 │   ├── components/            # Reusable React components
-│   │   ├── Header.tsx         # Navigation header
-│   │   ├── Footer.tsx         # Site footer
-│   │   ├── Hero.tsx           # Hero section
+│   │   ├── Header.tsx         # Navigation header (dark theme)
+│   │   ├── Footer.tsx         # Site footer (dark theme)
+│   │   ├── Hero.tsx           # Hero section (minimalist)
+│   │   ├── PlatformCard.tsx   # Platform/issue card component
 │   │   ├── VolunteerForm.tsx  # Volunteer signup form
-│   │   └── IssueCard.tsx      # Issue display card
-│   └── globals.css            # Global styles with campaign theme
+│   │   └── IssueCard.tsx      # Legacy issue display card
+│   └── globals.css            # Global styles with monteroforaz theme
+├── src/
+│   └── data/
+│       └── platforms.ts       # Platform content data (CUSTOMIZE HERE)
 ├── i18n/
 │   ├── routing.ts             # i18n routing configuration
 │   └── request.ts             # i18n request configuration
@@ -146,19 +210,19 @@ SENDGRID_API_KEY="your-api-key"
 │   ├── en.json                # English translations
 │   └── es.json                # Spanish translations (marked with VERIFY TRANSLATION)
 ├── types/
-│   └── index.ts               # TypeScript type definitions
+│   └── index.ts               # TypeScript type definitions (includes Platform type)
 ├── utils/
 │   └── analytics.ts           # Analytics utilities (GTM, Meta)
 ├── tests/
 │   └── accessibility.spec.ts  # Accessibility tests
-├── .github/
-│   ├── workflows/
-│   │   └── ci.yml             # GitHub Actions CI workflow
-│   ├── dependabot.yml         # Dependabot configuration
-│   ├── ISSUE_TEMPLATE/        # Issue templates
-│   └── pull_request_template.md  # PR template
 ├── public/
-│   └── placeholders/          # Placeholder images
+│   └── placeholders/          # Placeholder images (REPLACE THESE)
+│       ├── placeholder-hero.svg
+│       ├── placeholder-portrait.svg
+│       ├── placeholder-card-1.jpg
+│       ├── placeholder-card-2.jpg
+│       └── README.txt         # Image replacement instructions
+├── tailwind.config.ts         # Tailwind theme configuration
 └── .env.example               # Example environment variables
 ```
 
