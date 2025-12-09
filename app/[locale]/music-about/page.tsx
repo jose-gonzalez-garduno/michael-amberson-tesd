@@ -1,4 +1,10 @@
-export default async function MusicAboutPage() {
+interface PageProps {
+  params: Promise<{ locale: string }>;
+}
+
+export default async function MusicAboutPage({ params }: PageProps) {
+  // Params extracted for potential future use (e.g., i18n)
+  await params;
 
   return (
     <div className="min-h-screen bg-[--montero-dark-bg]">

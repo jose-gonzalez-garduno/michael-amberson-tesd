@@ -1,4 +1,10 @@
-export default async function LinksPage() {
+interface PageProps {
+  params: Promise<{ locale: string }>;
+}
+
+export default async function LinksPage({ params }: PageProps) {
+  // Params extracted for potential future use (e.g., i18n)
+  await params;
 
   const links = [
     {
