@@ -1,5 +1,3 @@
-import Link from 'next/link';
-import Image from 'next/image';
 import type { Release } from '@/data/releases';
 
 interface ReleaseCardProps {
@@ -7,7 +5,7 @@ interface ReleaseCardProps {
   locale: string;
 }
 
-export default function ReleaseCard({ release, locale }: ReleaseCardProps) {
+export default function ReleaseCard({ release }: ReleaseCardProps) {
   return (
     <div className="montero-card-hover bg-[--montero-paper] rounded-lg overflow-hidden shadow-md">
       {/* Cover Image */}

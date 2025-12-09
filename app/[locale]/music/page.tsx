@@ -1,4 +1,3 @@
-import { getTranslations } from 'next-intl/server';
 import ReleaseCard from '@/app/components/music/ReleaseCard';
 import { releases } from '@/data/releases';
 
@@ -8,7 +7,6 @@ interface PageProps {
 
 export default async function MusicPage({ params }: PageProps) {
   const { locale } = await params;
-  const t = await getTranslations('music');
 
   return (
     <div className="min-h-screen bg-[--montero-dark-bg]">

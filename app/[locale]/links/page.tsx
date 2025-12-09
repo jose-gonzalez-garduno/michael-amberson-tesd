@@ -1,9 +1,4 @@
-interface PageProps {
-  params: Promise<{ locale: string }>;
-}
-
-export default async function LinksPage({ params }: PageProps) {
-  const { locale } = await params;
+export default async function LinksPage() {
 
   const links = [
     {

@@ -1,11 +1,4 @@
-import Link from 'next/link';
-
-interface PageProps {
-  params: Promise<{ locale: string }>;
-}
-
-export default async function MusicAboutPage({ params }: PageProps) {
-  const { locale } = await params;
+export default async function MusicAboutPage() {
 
   return (
     <div className="min-h-screen bg-[--montero-dark-bg]">
