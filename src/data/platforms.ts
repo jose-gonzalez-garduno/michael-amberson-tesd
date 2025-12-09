@@ -117,6 +117,11 @@ Every tax dollar should be used wisely to benefit our students and schools. We a
   },
 ];
 
+// Note: Using linear search is acceptable here because:
+// 1. Platform list is small (4 items)
+// 2. This function is called during build time (SSG), not at runtime
+// 3. Performance impact is negligible for small datasets
+// If the platform list grows significantly (>50 items), consider using a Map for O(1) lookups
 export function getPlatformBySlug(slug: string): Platform | undefined {
   return platforms.find((platform) => platform.slug === slug);
 }

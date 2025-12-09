@@ -64,6 +64,11 @@ export default async function PlatformDetailPage({ params }: PageProps) {
         {/* Platform Details */}
         <div className="bg-paper rounded-xl p-8 md:p-12 card-shadow">
           <div className="prose prose-invert prose-lg max-w-none">
+            {/* 
+              Security note: This content comes from our own data file (src/data/platforms.ts),
+              not from user input, so dangerouslySetInnerHTML is safe here.
+              The content is statically defined at build time.
+            */}
             <div
               className="text-muted leading-relaxed"
               dangerouslySetInnerHTML={{

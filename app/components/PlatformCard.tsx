@@ -15,6 +15,7 @@ export default function PlatformCard({ platform }: PlatformCardProps) {
     <Link
       href={`/${locale}/platform/${platform.slug}`}
       className="block bg-paper rounded-xl overflow-hidden hover-lift card-shadow transition-all duration-200"
+      aria-label={`Read more about ${platform.title}`}
     >
       <div className="relative h-48 bg-gradient-to-br from-accent-primary/20 to-accent-secondary/20">
         {/* Placeholder for image - using gradient background */}
@@ -32,13 +33,15 @@ export default function PlatformCard({ platform }: PlatformCardProps) {
         </p>
         
         <div className="mt-4 flex items-center text-accent-primary text-sm font-semibold">
-          Learn More
+          <span className="sr-only">Read more about {platform.title}</span>
+          <span aria-hidden="true">Learn More</span>
           <svg
             className="ml-2 w-4 h-4"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
           >
             <path
               strokeLinecap="round"

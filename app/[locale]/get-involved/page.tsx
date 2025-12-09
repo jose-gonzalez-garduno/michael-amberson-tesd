@@ -123,62 +123,78 @@ export default async function GetInvolved({ params }: PageProps) {
           <h2 className="text-3xl font-bold text-text-primary mb-6">
             Volunteer Sign-Up
           </h2>
-          <p className="text-muted mb-8">
+          <p className="text-muted mb-2">
             [Placeholder for volunteer form. This would be replaced with an actual form or integrated with a CRM system.]
+          </p>
+          <p 
+            id="form-status-message" 
+            className="text-sm text-muted mb-8"
+          >
+            This form is currently disabled as it contains placeholder content only. 
+            To activate, integrate with your volunteer management system.
           </p>
           
           <div className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-medium text-text-secondary mb-2">
+                <label className="block text-sm font-medium text-text-secondary mb-2" htmlFor="first-name">
                   First Name
                 </label>
                 <input
+                  id="first-name"
                   type="text"
                   className="w-full px-4 py-3 bg-bg border border-accent-primary/20 rounded-lg text-text-primary placeholder-muted focus:outline-none focus:border-accent-primary transition-colors"
                   placeholder="Enter your first name"
+                  aria-describedby="form-status-message"
                   disabled
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-text-secondary mb-2">
+                <label className="block text-sm font-medium text-text-secondary mb-2" htmlFor="last-name">
                   Last Name
                 </label>
                 <input
+                  id="last-name"
                   type="text"
                   className="w-full px-4 py-3 bg-bg border border-accent-primary/20 rounded-lg text-text-primary placeholder-muted focus:outline-none focus:border-accent-primary transition-colors"
                   placeholder="Enter your last name"
+                  aria-describedby="form-status-message"
                   disabled
                 />
               </div>
             </div>
             
             <div>
-              <label className="block text-sm font-medium text-text-secondary mb-2">
+              <label className="block text-sm font-medium text-text-secondary mb-2" htmlFor="email">
                 Email
               </label>
               <input
+                id="email"
                 type="email"
                 className="w-full px-4 py-3 bg-bg border border-accent-primary/20 rounded-lg text-text-primary placeholder-muted focus:outline-none focus:border-accent-primary transition-colors"
                 placeholder="your.email@example.com"
+                aria-describedby="form-status-message"
                 disabled
               />
             </div>
             
             <div>
-              <label className="block text-sm font-medium text-text-secondary mb-2">
+              <label className="block text-sm font-medium text-text-secondary mb-2" htmlFor="phone">
                 Phone
               </label>
               <input
+                id="phone"
                 type="tel"
                 className="w-full px-4 py-3 bg-bg border border-accent-primary/20 rounded-lg text-text-primary placeholder-muted focus:outline-none focus:border-accent-primary transition-colors"
                 placeholder="(123) 456-7890"
+                aria-describedby="form-status-message"
                 disabled
               />
             </div>
             
             <button
               className="w-full md:w-auto px-8 py-4 bg-accent-primary hover:bg-accent-secondary text-bg font-semibold rounded-lg transition-colors shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+              aria-describedby="form-status-message"
               disabled
             >
               Submit (Form Not Active - Placeholder)
