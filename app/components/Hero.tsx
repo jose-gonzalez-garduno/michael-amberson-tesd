@@ -1,6 +1,5 @@
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
-import Image from 'next/image';
 
 interface HeroProps {
   locale: string;
@@ -10,63 +9,45 @@ export default async function Hero({ locale }: HeroProps) {
   const t = await getTranslations('hero');
   
   return (
-    <section className="relative bg-campaign-light py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Text Content */}
-          <div className="space-y-6">
-            {/* Add comment about Google Font - humanist/serif-like */}
-            {/* TODO: Add Google Font (e.g., Lora, Merriweather, or Playfair Display) for headings */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-campaign-text-dark">
-              {t('title')}
-            </h1>
-            
-            <h2 className="text-2xl md:text-3xl font-semibold text-campaign-secondary">
-              {t('subtitle')}
-            </h2>
-            
-            <p className="text-lg md:text-xl text-campaign-text-light leading-relaxed">
-              {t('tagline')}
-            </p>
-            
-            {/* CTAs - Primary and Secondary */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Link
-                href={`/${locale}/donate`}
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-campaign-accent hover:bg-campaign-secondary transition-colors rounded-full shadow-lg hover:shadow-xl"
-                aria-label={t('donateCTA')}
-              >
-                {t('donateCTA')}
-              </Link>
-              <Link
-                href={`/${locale}/volunteer`}
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-campaign-primary bg-white hover:bg-campaign-primary hover:text-white border-2 border-campaign-primary transition-colors rounded-full shadow-md hover:shadow-lg"
-                aria-label={t('volunteerCTA')}
-              >
-                {t('volunteerCTA')}
-              </Link>
-            </div>
-          </div>
+    <section className="hero-section relative py-20 md:py-32">
+      <div className="container mx-auto">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          {/* Hero Title */}
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-text-primary">
+            Candidate Name
+          </h1>
           
-          {/* Right Column - Portrait Image */}
-          <div className="relative">
-            <div className="relative w-full aspect-[3/4] max-w-md mx-auto lg:ml-auto">
-              {/* Container with warm accent border */}
-              <div className="absolute inset-0 bg-campaign-accent rounded-2xl transform translate-x-4 translate-y-4" />
-              <div className="relative bg-white rounded-2xl overflow-hidden shadow-2xl">
-                <Image
-                  src="/placeholders/hero.jpg"
-                  alt={t('imageAlt')}
-                  width={600}
-                  height={800}
-                  className="w-full h-full object-cover"
-                  priority
-                />
-              </div>
-            </div>
+          {/* Tagline */}
+          <p className="text-xl md:text-2xl text-text-secondary leading-relaxed max-w-2xl mx-auto">
+            Fighting for a better tomorrow. Placeholder tagline for your campaign message.
+          </p>
+          
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
+            <Link
+              href={`/${locale}/platform`}
+              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-bg bg-accent-primary hover:bg-accent-secondary transition-all duration-200 rounded-lg shadow-lg hover:shadow-xl"
+            >
+              View Platform
+            </Link>
+            <a
+              href="#"
+              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-accent-primary bg-transparent hover:bg-accent-primary/10 border-2 border-accent-primary transition-all duration-200 rounded-lg"
+            >
+              Donate
+            </a>
+            <Link
+              href={`/${locale}/get-involved`}
+              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-accent-secondary bg-transparent hover:bg-accent-secondary/10 border-2 border-accent-secondary transition-all duration-200 rounded-lg"
+            >
+              Volunteer
+            </Link>
           </div>
         </div>
       </div>
+      
+      {/* Decorative gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-paper pointer-events-none" />
     </section>
   );
 }

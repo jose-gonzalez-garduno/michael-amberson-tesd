@@ -40,6 +40,16 @@ export interface Issue {
   icon?: string;
 }
 
+// Platform type for campaign issues/platform pages
+export interface Platform {
+  title: string;
+  slug: string;
+  summary: string;
+  details: string;
+  cover: string;
+  icon?: string;
+}
+
 // Endorsement type
 export interface Endorsement {
   id: string;
