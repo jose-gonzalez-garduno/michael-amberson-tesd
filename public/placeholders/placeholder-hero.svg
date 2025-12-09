@@ -1,0 +1,16 @@
+<svg width="1600" height="900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#69CE89;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#FBA16C;stop-opacity:0.3" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="#0f1112"/>
+  <rect width="1600" height="900" fill="url(#grad1)"/>
+  <text x="800" y="400" font-family="Arial, sans-serif" font-size="72" fill="#69CE89" text-anchor="middle" font-weight="bold">
+    HERO IMAGE
+  </text>
+  <text x="800" y="500" font-family="Arial, sans-serif" font-size="36" fill="#9aa0a6" text-anchor="middle">
+    Replace with 1600×900px campaign photo
+  </text>
+</svg>

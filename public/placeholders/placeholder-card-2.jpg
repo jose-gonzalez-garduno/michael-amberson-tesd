@@ -1,0 +1,17 @@
+<svg width="800" height="800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradCard2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FBA16C;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#69CE89;stop-opacity:0.2" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="#0f1112"/>
+  <rect width="800" height="800" fill="url(#gradCard2)"/>
+  <circle cx="400" cy="350" r="120" fill="#FBA16C" opacity="0.1"/>
+  <text x="400" y="420" font-family="Arial, sans-serif" font-size="64" text-anchor="middle">
+    🤝
+  </text>
+  <text x="400" y="500" font-family="Arial, sans-serif" font-size="36" fill="#9aa0a6" text-anchor="middle">
+    Card Image 2
+  </text>
+</svg>
