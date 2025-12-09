@@ -118,7 +118,7 @@ SENDGRID_API_KEY="your-api-key"
 .
 ├── app/
 │   ├── [locale]/              # Internationalized pages
-│   │   ├── about/             # About page
+│   │   ├── about/             # About page (Campaign)
 │   │   ├── issues/            # Issues/platform page
 │   │   ├── endorsements/      # Endorsements page
 │   │   ├── events/            # Events page
@@ -127,6 +127,10 @@ SENDGRID_API_KEY="your-api-key"
 │   │   ├── contact/           # Contact page
 │   │   ├── news/              # News/blog page
 │   │   ├── press/             # Press resources page
+│   │   ├── music/             # Music releases page (Artist portfolio)
+│   │   ├── music-about/       # Artist bio and contact page
+│   │   ├── music-home/        # Music portfolio home page
+│   │   ├── links/             # Social links page (Linktree-style)
 │   │   ├── layout.tsx         # Locale-specific layout with GTM
 │   │   └── page.tsx           # Home page with hero
 │   ├── api/
@@ -137,8 +141,13 @@ SENDGRID_API_KEY="your-api-key"
 │   │   ├── Footer.tsx         # Site footer
 │   │   ├── Hero.tsx           # Hero section
 │   │   ├── VolunteerForm.tsx  # Volunteer signup form
-│   │   └── IssueCard.tsx      # Issue display card
-│   └── globals.css            # Global styles with campaign theme
+│   │   ├── IssueCard.tsx      # Issue display card
+│   │   └── music/             # Music portfolio components
+│   │       ├── MonteroHero.tsx    # Music hero section
+│   │       └── ReleaseCard.tsx    # Release display card
+│   └── globals.css            # Global styles with campaign + music themes
+├── data/
+│   └── releases.ts            # Music releases data
 ├── i18n/
 │   ├── routing.ts             # i18n routing configuration
 │   └── request.ts             # i18n request configuration
@@ -158,9 +167,83 @@ SENDGRID_API_KEY="your-api-key"
 │   ├── ISSUE_TEMPLATE/        # Issue templates
 │   └── pull_request_template.md  # PR template
 ├── public/
-│   └── placeholders/          # Placeholder images
+│   ├── placeholders/          # Placeholder images
+│   └── assets/
+│       └── releases/          # Album/release cover art
 └── .env.example               # Example environment variables
 ```
+
+## Music Portfolio Pages
+
+The site now includes a music artist portfolio section with a distinct visual theme inspired by monteroforaz.com:
+
+### Color Palette
+- **Primary Green**: `#69CE89` - Mint green for primary actions
+- **Coral Orange**: `#FBA16C` - Warm coral for secondary actions
+- **Dark Background**: `#1a1a2e` - Deep navy for hero and backgrounds
+- **Paper Cards**: `#f4f4f4` - Soft off-white for content cards
+- **Accent Hover**: `#4a9d6d` - Darker mint for hover states
+
+### Available Music Pages
+
+1. **Music Home** (`/en/music-home` or `/es/music-home`)
+   - Large hero section with artist name and tagline
+   - Featured releases grid (3 most recent)
+   - About preview section
+   - Call-to-action buttons for Music and About pages
+
+2. **Music** (`/en/music` or `/es/music`)
+   - Complete discography grid showing all releases
+   - Each release card displays:
+     - Cover art (placeholder music note icon)
+     - Title, year, and format (Album/EP/Single)
+     - Label name (if applicable)
+     - Links to streaming platforms (Bandcamp, SoundCloud, Spotify)
+
+3. **Music About** (`/en/music-about` or `/es/music-about`)
+   - Artist biography section
+   - Contact information for bookings and inquiries
+   - Social media and streaming platform links
+
+4. **Links** (`/en/links` or `/es/links`)
+   - Linktree-style page with all music and social links
+   - Large, colorful buttons for each platform
+   - Profile section with artist name and description
+
+### Managing Music Releases
+
+To add or edit releases, modify the data file:
+```typescript
+// data/releases.ts
+export interface Release {
+  id: string;
+  title: string;
+  slug: string;
+  year: number;
+  format: string;  // 'Album', 'EP', or 'Single'
+  label?: string;
+  coverPath: string;
+  bandcampUrl?: string;
+  soundcloudUrl?: string;
+  spotifyUrl?: string;
+  description?: string;
+}
+```
+
+Add new releases to the `releases` array in the same file.
+
+### Adding Release Cover Art
+
+1. Add your album cover images to `public/assets/releases/`
+2. Images should be:
+   - Square aspect ratio (1:1)
+   - Recommended size: 800x800px
+   - Format: JPG or PNG
+   - File size: under 500KB for performance
+3. Update the `coverPath` in `data/releases.ts` to match your filename
+4. Include descriptive alt text for accessibility
+
+See `public/assets/releases/README.md` for more details.
 
 ## Internationalization
 
