@@ -13,6 +13,18 @@
   --campaign-light: #eff6ff;        /* Light blue background */
   --campaign-text-dark: #1f2937;    /* Dark gray for text */
   --campaign-text-light: #6b7280;   /* Medium gray for secondary text */
+  
+  /* Monteroforaz Theme Colors - Music/Artist Portfolio */
+  --montero-primary: #69CE89;       /* Mint green */
+  --montero-primary-dark: #4a9d6d;  /* Darker mint for hover */
+  --montero-coral: #FBA16C;         /* Coral/orange */
+  --montero-coral-dark: #e8845a;    /* Darker coral for hover */
+  --montero-dark-bg: #1a1a2e;       /* Deep navy background */
+  --montero-paper: #f4f4f4;         /* Soft off-white for cards */
+  --montero-text-dark: #2d2d2d;     /* Near black text */
+  --montero-text-muted: #6b7280;    /* Muted gray text */
+  --montero-gradient-start: #1a1a2e;
+  --montero-gradient-end: #16213e;
 }
 
 @theme inline {
@@ -29,8 +41,22 @@
   --color-campaign-text-dark: var(--campaign-text-dark);
   --color-campaign-text-light: var(--campaign-text-light);
   
+  /* Monteroforaz theme tokens */
+  --color-montero-primary: var(--montero-primary);
+  --color-montero-primary-dark: var(--montero-primary-dark);
+  --color-montero-coral: var(--montero-coral);
+  --color-montero-coral-dark: var(--montero-coral-dark);
+  --color-montero-dark-bg: var(--montero-dark-bg);
+  --color-montero-paper: var(--montero-paper);
+  --color-montero-text-dark: var(--montero-text-dark);
+  --color-montero-text-muted: var(--montero-text-muted);
+  
   /* System font stack */
   --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  
+  /* Spacing tokens */
+  --spacing-container: 1280px;
+  --spacing-section: 5rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -44,4 +70,18 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+}
+
+/* Monteroforaz-specific utility classes */
+.montero-hero-gradient {
+  background: linear-gradient(135deg, var(--montero-gradient-start) 0%, var(--montero-gradient-end) 100%);
+}
+
+.montero-card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.montero-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
