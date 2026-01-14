@@ -13,13 +13,6 @@ Campaign website for Michael Amberson III running for Tempe Elementary School Di
 - **Accessibility Testing**: Playwright with axe-core
 - **Analytics**: Google Tag Manager (GTM), GA4, Meta Pixel, Meta Conversion API
 
-## Campaign Color Palette
-
-The website uses a custom theme with the following colors:
-- **Primary (Deep Blue)**: `#1e40af` - Represents trust and stability
-- **Secondary (Red)**: `#dc2626` - Represents energy and passion
-- **Accent (Amber)**: `#f59e0b` - Represents warmth and optimism
-- **Light Background**: `#eff6ff` - Light blue for sections
 
 ## Getting Started
 
