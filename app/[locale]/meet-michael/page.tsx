@@ -34,6 +34,7 @@ export default async function MeetMichael({ params }: PageProps) {
                 src="/photos/IMG_0140.jpeg"
                 alt="Michael Abramson III"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
@@ -68,6 +69,7 @@ export default async function MeetMichael({ params }: PageProps) {
                 src="/photos/IMG_0142.jpeg"
                 alt="Michael Abramson III with community"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
@@ -84,6 +86,7 @@ export default async function MeetMichael({ params }: PageProps) {
                 src="/photos/IMG_0152.jpeg"
                 alt="Michael Abramson III engaging with students"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
