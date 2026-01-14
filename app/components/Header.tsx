@@ -3,6 +3,7 @@
 import { useLocale, useTranslations } from 'next-intl';
 import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Header() {
   const t = useTranslations('nav');
@@ -22,8 +23,15 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href={`/${locale}`} className="text-xl font-bold text-campaign-primary">
-              Michael Amberson III
+            <Link href={`/${locale}`} className="flex items-center">
+              <Image
+                src="/logo.png"
+                alt="Michael Abramson III for Tempe Elementary Governing Board"
+                width={200}
+                height={60}
+                className="h-12 w-auto"
+                priority
+              />
             </Link>
           </div>
           
@@ -31,43 +39,31 @@ export default function Header() {
           <div className="hidden md:flex md:items-center md:space-x-6">
             <Link
               href={`/${locale}`}
-              className="text-campaign-text-dark hover:text-campaign-primary transition-colors"
+              className="text-campaign-text-dark hover:text-campaign-accent transition-colors font-semibold"
             >
               {t('home')}
             </Link>
             <Link
-              href={`/${locale}/about`}
-              className="text-campaign-text-dark hover:text-campaign-primary transition-colors"
+              href={`/${locale}/meet-michael`}
+              className="text-campaign-text-dark hover:text-campaign-accent transition-colors font-semibold"
             >
-              {t('about')}
+              {t('meetMichael')}
             </Link>
             <Link
-              href={`/${locale}/issues`}
-              className="text-campaign-text-dark hover:text-campaign-primary transition-colors"
+              href={`/${locale}/priorities`}
+              className="text-campaign-text-dark hover:text-campaign-accent transition-colors font-semibold"
             >
-              {t('issues')}
+              {t('priorities')}
             </Link>
             <Link
-              href={`/${locale}/endorsements`}
-              className="text-campaign-text-dark hover:text-campaign-primary transition-colors"
+              href={`/${locale}/get-involved`}
+              className="text-campaign-text-dark hover:text-campaign-accent transition-colors font-semibold"
             >
-              {t('endorsements')}
-            </Link>
-            <Link
-              href={`/${locale}/events`}
-              className="text-campaign-text-dark hover:text-campaign-primary transition-colors"
-            >
-              {t('events')}
-            </Link>
-            <Link
-              href={`/${locale}/volunteer`}
-              className="text-campaign-text-dark hover:text-campaign-primary transition-colors"
-            >
-              {t('volunteer')}
+              {t('getInvolved')}
             </Link>
             <Link
               href={`/${locale}/donate`}
-              className="bg-campaign-accent hover:bg-campaign-secondary text-white px-4 py-2 rounded-md font-semibold transition-colors"
+              className="bg-campaign-accent hover:bg-campaign-accent-alt text-white px-6 py-2 rounded-md font-bold transition-colors shadow-md hover:shadow-lg"
             >
               {t('donate')}
             </Link>
