@@ -1,0 +1,41 @@
+Micheal’s Website information
+
+Navigation Bar
+-Logo
+-HOME
+-MEET MICHAEL
+-PRIORITIES
+-GET INVOLVED 
+-DONATE (Button that links to act blue website)
+
+Main page
+1. Image of Michael with a few lines about him and button to redirect to the MEET MICHAEL page. 2. A PRIORITIES section will be underneath with a few lines of his mission and then a button link to the PRIORITIES page. 
+3. A Boundaries section with an image of Tempe, Arizona boundary map. A button to link to learn more (https://www.arcgis.com/home/item.html?id=660f9b04f0c044999e6bcd23e749ef1b&sublayer=0)
+4. Under that, there will be a Contribute now section with a short to let the audience know that the campaign is entirely powered by contributions from supporters like them and a button that links to act blue website. 
+
+MEET MICHAEL page
+1. Information about Michael and pictures. 
+2. Text with left/right image. 
+
+PRIORITIES page (example of https://young4pxu.com/mission)
+1. The ask is to have a list of issues. The issues will come in time when meeting with additional people. 
+2. Under that, there will be a Contribute now section with a short to let the audience know that the campaign is entirely powered by contributions from supporters like them and a button that links to act blue website. 
+
+GET INVOLVED page
+1. The purpose of this page is to have people sign up to volunteer with Michael’s campaign.
+2. Needs to have a short description like: Get involved with Micheal	
+3. Then a form that collects the First name, last name, email, and phone number.
+4. The data should be saved somewhere where Michael can access it for news letter data. 
+5. Mail chimp can probably help?
+6. Have a section for social media and icons that link to Micheal’s social media pages.
+7. Under that, there will be a Contribute now section with a short to let the audience know that the campaign is entirely powered by contributions from supporters like them and a button that links to act blue website. 
+
+CONTACT page
+1. There will be a form that allows user to submit a name, email, subject and message.
+
+FOOTER
+1. logo
+2. social media links
+3. contact page  
+
+
