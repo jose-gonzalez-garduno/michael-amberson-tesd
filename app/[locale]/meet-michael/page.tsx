@@ -107,7 +107,7 @@ export default async function MeetMichael({ params }: PageProps) {
       <section className="py-16 bg-campaign-primary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <blockquote className="text-2xl md:text-3xl font-bold italic mb-4">
-            "{t('quote')}"
+            &ldquo;{t('quote')}&rdquo;
           </blockquote>
           <p className="text-xl text-gray-200">
             — Michael Abramson III
