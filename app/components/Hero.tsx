@@ -32,18 +32,18 @@ export default async function Hero({ locale }: HeroProps) {
             {/* CTAs - Primary and Secondary */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link
+                href={`/${locale}/meet-michael`}
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-campaign-primary bg-white hover:bg-gray-50 border-2 border-campaign-primary transition-colors rounded-lg shadow-md hover:shadow-lg"
+                aria-label="Learn More About Michael"
+              >
+                {t('learnMore')}
+              </Link>
+              <Link
                 href={`/${locale}/donate`}
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-campaign-accent hover:bg-campaign-secondary transition-colors rounded-full shadow-lg hover:shadow-xl"
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-campaign-accent hover:bg-campaign-accent-alt transition-colors rounded-lg shadow-lg hover:shadow-xl"
                 aria-label={t('donateCTA')}
               >
                 {t('donateCTA')}
-              </Link>
-              <Link
-                href={`/${locale}/volunteer`}
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-campaign-primary bg-white hover:bg-campaign-primary hover:text-white border-2 border-campaign-primary transition-colors rounded-full shadow-md hover:shadow-lg"
-                aria-label={t('volunteerCTA')}
-              >
-                {t('volunteerCTA')}
               </Link>
             </div>
           </div>
@@ -55,7 +55,7 @@ export default async function Hero({ locale }: HeroProps) {
               <div className="absolute inset-0 bg-campaign-accent rounded-2xl transform translate-x-4 translate-y-4" />
               <div className="relative bg-white rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/placeholders/hero.jpg"
+                  src="/photos/IMG_0176.jpeg"
                   alt={t('imageAlt')}
                   width={600}
                   height={800}

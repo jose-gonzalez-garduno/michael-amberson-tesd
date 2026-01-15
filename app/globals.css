@@ -4,13 +4,15 @@
   --background: #ffffff;
   --foreground: #171717;
   
-  /* Campaign Colors */
-  --campaign-primary: #1e40af;      /* Deep blue - trust, stability */
-  --campaign-primary-dark: #1e3a8a; /* Darker blue for hover states */
-  --campaign-secondary: #dc2626;    /* Red - energy, passion */
-  --campaign-secondary-dark: #b91c1c;
-  --campaign-accent: #f59e0b;       /* Amber - warmth, optimism */
-  --campaign-light: #eff6ff;        /* Light blue background */
+  /* Campaign Colors - Brand Specifications */
+  --campaign-primary: #202C59;      /* Primary Blue - trust, stability */
+  --campaign-primary-dark: #1a2347; /* Darker blue for hover states */
+  --campaign-secondary: #581F18;    /* Secondary Dark - warmth, grounding */
+  --campaign-secondary-dark: #3d1510;
+  --campaign-accent: #F0A202;       /* Accent Orange - warmth, energy */
+  --campaign-accent-alt: #F18805;   /* Alternate accent */
+  --campaign-accent-warm: #D95D39;  /* Warm accent */
+  --campaign-light: #FFF8F0;        /* Warm light background */
   --campaign-text-dark: #1f2937;    /* Dark gray for text */
   --campaign-text-light: #6b7280;   /* Medium gray for secondary text */
 }
@@ -25,6 +27,8 @@
   --color-campaign-secondary: var(--campaign-secondary);
   --color-campaign-secondary-dark: var(--campaign-secondary-dark);
   --color-campaign-accent: var(--campaign-accent);
+  --color-campaign-accent-alt: var(--campaign-accent-alt);
+  --color-campaign-accent-warm: var(--campaign-accent-warm);
   --color-campaign-light: var(--campaign-light);
   --color-campaign-text-dark: var(--campaign-text-dark);
   --color-campaign-text-light: var(--campaign-text-light);
