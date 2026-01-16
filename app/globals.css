@@ -1,5 +1,7 @@
-/* Import Google Fonts - Aptos alternative (Inter) for body, Brunson alternative (Poppins Bold) for headers */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@700;800;900&display=swap');
+/* Typography - Brunson for headers, Aptos for body */
+/* Note: Brunson is a premium font, using Montserrat as a web-safe alternative with similar bold character */
+/* Aptos is Microsoft's system font (Windows 11+), available on newer systems */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap');
 
 @import "tailwindcss";
 
@@ -19,9 +21,9 @@
   --campaign-text-dark: #1f2937;    /* Dark gray for text */
   --campaign-text-light: #6b7280;   /* Medium gray for secondary text */
   
-  /* Typography */
-  --font-heading: 'Poppins', system-ui, sans-serif;  /* Brunson alternative - bold, high-impact */
-  --font-body: 'Inter', system-ui, sans-serif;       /* Aptos alternative - clean, legible */
+  /* Typography - Headers: Brunson (with Montserrat fallback), Body: Aptos (with Inter fallback) */
+  --font-heading: 'Brunson', 'Montserrat', system-ui, -apple-system, sans-serif;
+  --font-body: 'Aptos', 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
 @theme inline {
@@ -40,10 +42,10 @@
   --color-campaign-text-dark: var(--campaign-text-dark);
   --color-campaign-text-light: var(--campaign-text-light);
   
-  /* Typography - use the font stacks directly */
-  --font-heading: 'Poppins', system-ui, sans-serif;
-  --font-body: 'Inter', system-ui, sans-serif;
-  --font-sans: 'Inter', system-ui, sans-serif;
+  /* Typography - Headers: Brunson (with Montserrat fallback), Body: Aptos (with Inter fallback) */
+  --font-heading: 'Brunson', 'Montserrat', system-ui, -apple-system, sans-serif;
+  --font-body: 'Aptos', 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Aptos', 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
