@@ -8,7 +8,7 @@ interface IssueCardProps {
 
 export default function IssueCard({ issue, locale }: IssueCardProps) {
   return (
-    <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6 border-t-4 border-campaign-accent">
+    <div className="card-hover-lift bg-white rounded-lg shadow-md p-6 border-t-4 border-campaign-accent">
       {/* Icon placeholder */}
       {issue.icon && (
         <div className="text-4xl mb-4" aria-hidden="true">

@@ -10,22 +10,20 @@ export default async function Hero({ locale }: HeroProps) {
   const t = await getTranslations('hero');
   
   return (
-    <section className="relative bg-campaign-light py-16 md:py-24">
+    <section className="relative bg-campaign-primary py-16 md:py-24 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text Content */}
           <div className="space-y-6">
-            {/* Add comment about Google Font - humanist/serif-like */}
-            {/* TODO: Add Google Font (e.g., Lora, Merriweather, or Playfair Display) for headings */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-campaign-text-dark">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               {t('title')}
             </h1>
             
-            <h2 className="text-2xl md:text-3xl font-semibold text-campaign-secondary">
+            <h2 className="text-2xl md:text-3xl font-semibold text-campaign-accent">
               {t('subtitle')}
             </h2>
             
-            <p className="text-lg md:text-xl text-campaign-text-light leading-relaxed">
+            <p className="text-lg md:text-xl leading-relaxed opacity-90">
               {t('tagline')}
             </p>
             
@@ -33,14 +31,14 @@ export default async function Hero({ locale }: HeroProps) {
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link
                 href={`/${locale}/meet-michael`}
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-campaign-primary bg-white hover:bg-gray-50 border-2 border-campaign-primary transition-colors rounded-lg shadow-md hover:shadow-lg"
+                className="btn-hover-scale inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-campaign-primary bg-white hover:bg-gray-50 transition-colors rounded-lg shadow-md hover:shadow-lg"
                 aria-label="Learn More About Michael"
               >
                 {t('learnMore')}
               </Link>
               <Link
                 href={`/${locale}/donate`}
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-campaign-accent hover:bg-campaign-accent-alt transition-colors rounded-lg shadow-lg hover:shadow-xl"
+                className="btn-hover-scale inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-campaign-accent hover:bg-campaign-accent-alt transition-colors rounded-lg shadow-lg hover:shadow-xl"
                 aria-label={t('donateCTA')}
               >
                 {t('donateCTA')}

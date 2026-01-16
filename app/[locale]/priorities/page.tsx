@@ -45,13 +45,13 @@ export default async function Priorities({ params }: PageProps) {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <div className="bg-campaign-light py-16">
+      <div className="bg-campaign-primary py-16 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-campaign-primary mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
               {t('title')}
             </h1>
-            <p className="text-xl text-campaign-text-light max-w-3xl mx-auto">
+            <p className="text-xl opacity-90 max-w-3xl mx-auto">
               {t('subtitle')}
             </p>
           </div>
@@ -66,7 +66,7 @@ export default async function Priorities({ params }: PageProps) {
               <div
                 key={priority.id}
                 id={priority.id}
-                className="bg-white rounded-lg shadow-lg p-8 border-l-4 border-campaign-accent hover:shadow-xl transition-shadow"
+                className="card-hover-lift bg-white rounded-lg shadow-lg p-8 border-l-4 border-campaign-accent"
               >
                 <div className="flex items-start space-x-4">
                   {priority.icon && (
@@ -90,7 +90,7 @@ export default async function Priorities({ params }: PageProps) {
       </section>
 
       {/* Contribute Now Section */}
-      <section className="py-16 bg-campaign-accent-warm text-white">
+      <section className="py-16 bg-campaign-accent text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             {t('contributeTitle')}
@@ -100,7 +100,7 @@ export default async function Priorities({ params }: PageProps) {
           </p>
           <Link
             href={`/${locale}/donate`}
-            className="inline-block bg-white text-campaign-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
+            className="btn-hover-scale inline-block bg-white text-campaign-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-50 transition-colors shadow-lg hover:shadow-xl"
           >
             {t('contributeButton')}
           </Link>
