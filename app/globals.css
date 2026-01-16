@@ -1,6 +1,12 @@
 /* Typography - Brunson for headers, Aptos for body */
-/* Note: Brunson is a premium font, using Montserrat as a web-safe alternative with similar bold character */
-/* Aptos is Microsoft's system font (Windows 11+), available on newer systems */
+/* 
+ * Brunson: Premium font - requires licensing and @font-face declarations
+ * To use Brunson, add @font-face rules above this comment or load via Adobe Fonts/similar
+ * Current setup uses Montserrat from Google Fonts as primary fallback
+ * 
+ * Aptos: Microsoft system font (Windows 11+), available natively on newer systems
+ * Uses Inter from Google Fonts as primary fallback for other platforms
+ */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap');
 
 @import "tailwindcss";
