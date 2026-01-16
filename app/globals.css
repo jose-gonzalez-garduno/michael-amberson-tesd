@@ -1,7 +1,7 @@
-@import "tailwindcss";
-
 /* Import Google Fonts - Aptos alternative (Inter) for body, Brunson alternative (Poppins Bold) for headers */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@700;800;900&display=swap');
+
+@import "tailwindcss";
 
 :root {
   --background: #ffffff;
