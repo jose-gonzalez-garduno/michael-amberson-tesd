@@ -4,12 +4,23 @@ import { useLocale, useTranslations } from 'next-intl';
 import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
 export default function Header() {
   const t = useTranslations('nav');
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
+  const [isScrolled, setIsScrolled] = useState(false);
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   
   const switchLanguage = (newLocale: string) => {
     // Remove current locale from pathname and add new locale
@@ -17,10 +28,14 @@ export default function Header() {
     router.push(`/${newLocale}${pathWithoutLocale}`);
   };
   
+  const isActivePage = (path: string) => {
+    return pathname === `/${locale}${path}`;
+  };
+  
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
+    <header className={`bg-white sticky top-0 z-50 header-sticky ${isScrolled ? 'scrolled shadow-lg' : 'shadow-md'}`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className={`flex justify-between items-center transition-all ${isScrolled ? 'h-14' : 'h-16'}`}>
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href={`/${locale}`} className="flex items-center">
@@ -29,7 +44,7 @@ export default function Header() {
                 alt="Michael Abramson III for Tempe Elementary Governing Board"
                 width={200}
                 height={60}
-                className="h-12 w-auto"
+                className={`transition-all ${isScrolled ? 'h-10' : 'h-12'} w-auto`}
                 priority
               />
             </Link>
@@ -39,31 +54,31 @@ export default function Header() {
           <div className="hidden md:flex md:items-center md:space-x-6">
             <Link
               href={`/${locale}`}
-              className="text-campaign-text-dark hover:text-campaign-accent transition-colors font-semibold"
+              className={`nav-link text-campaign-text-dark hover:text-campaign-accent transition-colors font-semibold ${isActivePage('') ? 'active' : ''}`}
             >
               {t('home')}
             </Link>
             <Link
               href={`/${locale}/meet-michael`}
-              className="text-campaign-text-dark hover:text-campaign-accent transition-colors font-semibold"
+              className={`nav-link text-campaign-text-dark hover:text-campaign-accent transition-colors font-semibold ${isActivePage('/meet-michael') ? 'active' : ''}`}
             >
               {t('meetMichael')}
             </Link>
             <Link
               href={`/${locale}/priorities`}
-              className="text-campaign-text-dark hover:text-campaign-accent transition-colors font-semibold"
+              className={`nav-link text-campaign-text-dark hover:text-campaign-accent transition-colors font-semibold ${isActivePage('/priorities') ? 'active' : ''}`}
             >
               {t('priorities')}
             </Link>
             <Link
               href={`/${locale}/get-involved`}
-              className="text-campaign-text-dark hover:text-campaign-accent transition-colors font-semibold"
+              className={`nav-link text-campaign-text-dark hover:text-campaign-accent transition-colors font-semibold ${isActivePage('/get-involved') ? 'active' : ''}`}
             >
               {t('getInvolved')}
             </Link>
             <Link
               href={`/${locale}/donate`}
-              className="bg-campaign-accent hover:bg-campaign-accent-alt text-white px-6 py-2 rounded-md font-bold transition-colors shadow-md hover:shadow-lg"
+              className="btn-hover-scale bg-campaign-accent hover:bg-campaign-accent-alt text-white px-6 py-2 rounded-md font-bold shadow-md hover:shadow-lg"
             >
               {t('donate')}
             </Link>

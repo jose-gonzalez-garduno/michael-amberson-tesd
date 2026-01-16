@@ -45,12 +45,12 @@ export default async function Home({ params }: PageProps) {
       {/* Hero Section */}
       <Hero locale={locale} />
       
-      {/* Issues Highlights Section */}
+      {/* Issues Highlights Section - Modular Style */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-campaign-primary mb-4">
-              {t('prioritiesTitle')}
+              {t('prioritiesTitle')} <span className="doodle-star" aria-hidden="true"></span>
             </h2>
             <p className="text-lg text-campaign-text-light max-w-2xl mx-auto mb-8">
               {t('prioritiesDescription')}
@@ -66,7 +66,7 @@ export default async function Home({ params }: PageProps) {
           <div className="text-center">
             <Link
               href={`/${locale}/priorities`}
-              className="inline-block bg-campaign-accent hover:bg-campaign-accent-alt text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors shadow-lg hover:shadow-xl"
+              className="btn-hover-scale inline-block bg-campaign-accent hover:bg-campaign-accent-alt text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors shadow-lg hover:shadow-xl"
             >
               {t('viewAllPriorities')}
             </Link>
@@ -74,14 +74,14 @@ export default async function Home({ params }: PageProps) {
         </div>
       </section>
 
-      {/* Boundaries Section */}
-      <section className="py-16 bg-campaign-light">
+      {/* Boundaries Section - High Contrast Modular Block */}
+      <section className="py-16 bg-campaign-accent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-campaign-primary mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               {t('boundariesTitle')}
             </h2>
-            <p className="text-lg text-campaign-text-light max-w-2xl mx-auto">
+            <p className="text-lg text-white opacity-90 max-w-2xl mx-auto">
               {t('boundariesDescription')}
             </p>
           </div>
@@ -98,7 +98,7 @@ export default async function Home({ params }: PageProps) {
                 href="https://www.arcgis.com/home/item.html?id=660f9b04f0c044999e6bcd23e749ef1b&sublayer=0"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-campaign-primary hover:bg-campaign-primary-dark text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors shadow-lg hover:shadow-xl"
+                className="btn-hover-scale inline-block bg-campaign-primary hover:bg-campaign-primary-dark text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors shadow-lg hover:shadow-xl"
               >
                 {t('learnMoreBoundaries')}
               </a>
@@ -107,8 +107,8 @@ export default async function Home({ params }: PageProps) {
         </div>
       </section>
 
-      {/* Contribute Now Section */}
-      <section className="py-16 bg-campaign-accent-warm text-white">
+      {/* Contribute Now Section - High Contrast Block */}
+      <section className="py-16 bg-campaign-primary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             {t('contributeTitle')}
@@ -118,7 +118,7 @@ export default async function Home({ params }: PageProps) {
           </p>
           <Link
             href={`/${locale}/donate`}
-            className="inline-block bg-white text-campaign-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
+            className="btn-hover-scale inline-block bg-campaign-accent text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-campaign-accent-alt transition-colors shadow-lg hover:shadow-xl"
           >
             {t('contributeButton')}
           </Link>
