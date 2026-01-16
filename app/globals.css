@@ -40,10 +40,10 @@
   --color-campaign-text-dark: var(--campaign-text-dark);
   --color-campaign-text-light: var(--campaign-text-light);
   
-  /* Typography */
-  --font-heading: var(--font-heading);
-  --font-body: var(--font-body);
-  --font-sans: var(--font-body);
+  /* Typography - use the font stacks directly */
+  --font-heading: 'Poppins', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {

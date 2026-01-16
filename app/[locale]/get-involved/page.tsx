@@ -17,7 +17,7 @@ export default async function GetInvolved({ params }: PageProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              {t('title')} <span className="text-5xl">✨</span>
+              {t('title')} <span className="text-5xl" aria-hidden="true">✨</span>
             </h1>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               {t('subtitle')}
